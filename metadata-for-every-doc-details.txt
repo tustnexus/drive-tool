@@ -8,6 +8,10 @@ It assumes no prior programming experience beyond comfort with a terminal.
 
 WHAT YOU ARE BUILDING
 ---------------------
+Refer to the Image file (SVG) for the Steps 
+ 
+---------------------
+
 A JSON file — your personal Drive index — where every document has:
 - a filename and path
 - a size
@@ -74,8 +78,7 @@ Each batch produces one output file:
 
 RUNNING THE SCRIPT
 ------------------
-1. Download extract.js from the repository.
-
+1. Download extract.js from the repository https://github.com/tustnexus/drive-tool/
 2. Open the file and update the configuration section at the top:
 
    const RCLONE_EXE = "C:\\rclone\\rclone.exe";  // path to your rclone
@@ -119,14 +122,13 @@ In PowerShell:
   $files = Get-Content drive_summary_batch_*.json | ConvertFrom-Json
   $files | ConvertTo-Json -Depth 10 | Set-Content drive_summary_all.json
 
-Or simply paste all batch contents into a single JSON array manually
-for smaller drives.
+Or simply paste all batch contents into a single JSON array manually into your editor.
 
 ---
 
 ENRICHING WITH AI
 -----------------
-Paste the combined JSON into the enrichment prompt from the main post.
+Paste the combined JSON into enrich-metadata prompt from the main post.
 The AI will append structured fields to every entry:
 summary, category, tags, entities, themes, reuse score, content type.
 
@@ -148,13 +150,6 @@ PRACTICAL TIPS
 ---
 
 WHAT NEXT
----------
-Once you have your enriched JSON, you have more than an index.
-You have a structured map of your intellectual output.
-
-Feed it into the Cluster Map prompt.
-Revisit it quarterly.
-Use the reuse_potential scores to identify your highest-leverage
-existing material before starting anything new.
-
-Your Drive was never disorganised. It was unindexed.
+Once the enriched JSON is in hand, one has more than a retrieval aid. The structured fields — categories, themes, reuse scores — together form a modest but honest map of one's intellectual output over time. I am hopeful that readers will find this map useful not only for locating documents, but for understanding the recurring concerns that have shaped their work.
+The cluster-map prompt is a natural next step. Submitting the enriched JSON to the cluster-map prompt will create a markdown file that surfaces thematic groupings that are not always visible when files are encountered one at a time. I would suggest revisiting this markdown creation quarterly, as new documents will shift the clusters in ways that are often instructive. The reuse_potential scores, in particular, deserve attention before beginning any new project — it is worth knowing what already exists before committing effort to reconstruction.
+A Drive that feels disorganised is, in most cases, simply unindexed. The material is there. This method is one way of making it findable, and I trust it will be of some practical use to those willing to spend an afternoon on the initial setup.
