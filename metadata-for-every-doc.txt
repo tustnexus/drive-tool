@@ -1,0 +1,117 @@
+"For your whole drive you need something more, a contents page (metadata about every doc)."
+
+The illusion of AI-native search
+
+Gemini can already see your Drive. Ask it to summarise your files and it will. Ask it again tomorrow and it starts over. The knowledge is processed but never accumulated — you are paying the indexing cost every single time.
+
+There is no Contents page for your docs
+
+Have you ever faced:
+
+A. The retrieval failure — Google Drive's search returns the wrong file, or ten files, or nothing. The knowledge is there; the access is broken.
+
+B. The accumulation trap — Years of notes, drafts, and pitches pile up into a long list of folders and files. The problem is not volume — it is the absence of structure that lets you have useful snippets about every doc in your drive.
+
+C. The rediscovery cost — The real loss is not the missing file. It is the hour spent reconstructing an argument you made three years ago, from a document you cannot locate.
+
+D. The invisible asset — Most professionals have hundreds of documents representing years of thinking. None of it compounds. Each new project starts from scratch because there is no map of what already exists.
+
+E. The snippets gap — Search requires you to remember the right word. That does not work when your Drive has grown beyond a few dozen files and you need an idea, not a filename.
+
+The real missing layer is not search. It is a continuously reusable metadata layer — a contents page for your intellectual life — owned by you.
+
+What if you could run an AI prompt like this on your Drive?
+
+---
+
+# Map
+
+You are a knowledge cartographer. I will give you a JSON array of document summaries from my personal Google Drive.
+
+Produce a structured Markdown report with these four sections:
+
+## Cluster Map
+
+Group documents into 4-8 thematic clusters. Name each cluster evocatively — not generically. For each cluster:
+- Cluster name and one-sentence description of what unifies it
+- List of documents belonging to it
+- The connective thread: what specifically makes these documents belong together
+
+## Cross-Cutting Themes
+
+Identify 3-5 themes that surface across multiple clusters. For each: name the documents it appears in and explain the connection in 2-3 sentences.
+
+## Reuse Candidates
+
+Identify 3-5 documents whose content could directly seed a Substack post, pitch, or new project. For each: say specifically what it could become and why now.
+
+## Structural Observations
+
+What does the overall shape of this collection reveal about the owner's working patterns, intellectual obsessions, or knowledge gaps? Be direct and specific. No flattery. Every claim must be grounded in actual file content.
+
+Rules:
+- Name actual files. Quote actual phrases from snippets where they sharpen a point.
+- No generic observations.
+- Tone: sharp editorial, not academic summary.
+
+Data: Attached
+
+---
+
+The problem is you cannot attach a large number of files to an AI prompt. That approach works on a smaller Drive. For your whole Drive you need something more — a contents page. Metadata about every doc.
+
+I built mine using a small script. Here is what a single entry looks like after running it:
+
+{
+  "fileName": "OpenSouceBizModels.txt",
+  "remotePath": "Notes/OpenSouceBizModels.txt",
+  "size": "0.69 KB",
+  "snippet": "some basic Revenue Models for open source projects..."
+}
+
+And here is what the same entry looks like after enrichment with a second AI prompt:
+
+{
+  "fileName": "OpenSouceBizModels.txt",
+  "one_line_summary": "A concise overview of revenue models for open-source software companies.",
+  "category": "Fintech",
+  "tags": ["open source", "business models", "monetization", "dual licensing"],
+  "themes": ["market structure", "value capture"],
+  "reuse_potential": 5,
+  "content_type": "analysis"
+}
+
+That second pass used this prompt:
+
+---
+
+You are a knowledge architect. I will give you a JSON array of document summaries from my personal Google Drive. Each entry has: fileName, remotePath, size, snippet (first ~1000 chars of content).
+
+Enrich each entry with these fields:
+
+- one_line_summary: One sentence. Concrete and specific. No filler phrases.
+- category: Exactly one of: Fiction, Fintech, Career, Strategy, Research, Personal, Technical, Creative Nonfiction, Miscellaneous
+- tags: Array of 3-8 lowercase keyword tags. Prefer named concepts and entities over generic words.
+- entities: Object with three arrays — people, organizations, projects
+- themes: Array of 2-4 abstract themes
+- reuse_potential: Integer 1-5. How likely is this document's content to seed a new project, post, or pitch?
+- content_type: Exactly one of: narrative, analysis, reference, pitch, journal, correspondence, draft, list, transcript
+
+Rules:
+- Return ONLY a valid JSON array. No preamble, no markdown fences, no explanation.
+- Preserve all original fields exactly. Only append the new fields.
+- If a snippet is too short to infer metadata confidently, set reuse_potential to 1 and flag uncertainty in one_line_summary.
+
+Data: Attached
+
+---
+
+DIY using JavaScript runtimes (Bun or Node.js)
+
+The script, both prompts, and a sample JSON are available in the companion repository. A practical walkthrough — including rclone setup and running the script — is in the companion guide linked below.
+
+The implementation is deliberately simple. The insight it delivers is not.
+
+Your Drive is not disorganised. It is unindexed. There is a difference — and it is one script away.
+
+If this resonates, share it with someone whose Drive is quietly costing them more than they realise. The tools exist. The only thing missing was the map.

@@ -1,0 +1,12 @@
+GitHub Repo Checklist
+=====================
+
+[ ] extract.js          — the script
+[ ] README.md           — repo overview and quick start
+[ ] sample-json.txt     — raw + enriched JSON examples
+[ ] prompts/
+    [ ] cluster-map.md       — Cluster Map prompt
+    [ ] enrich-metadata.md   — Enrichment prompt
+[ ] metadata-for-every-doc.txt         — Substack post / vision
+[ ] metadata-for-every-doc-details.txt — Companion setup guide
+[ ] LICENSE             — MIT recommended

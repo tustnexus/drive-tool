@@ -1,0 +1,52 @@
+```sample summary json
+{
+    "fileName": "Safe Internet Group.txt",
+    "remotePath": "Notes/Safe Internet Group.txt",
+    "size": "2.39 KB",
+    "snippet": "Safe online habits of internet users are a pre-requisite for safe Internet adoption in India. Users - irrespective of the years of use - tend to be naive in their online behavior - until someone close to them becomes a victim. I believe we can influence user behaviour before habits are formed, as the Indian Internet story is till very young. Online commerce - ideal in a country of the size and diversity of India can flourish- only when criminal attempts and security breaches are kept in check to tolerable limits. Plagiarism, online harassment, online fraud, misleading children, identity theft, data theft, malicious software, voyeurism, stalking and criminal intent are parts of a larger problem that effects society as a whole and families in particular. I suggest a consortium approach to address these problems, with a 'Safe Internet Lab' being at the center of my efforts. The lab is not limited to applied research but catalyzes every step in the chain building on my previous ex"
+  },
+  {
+    "fileName": "Waldorf-reflect.txt",
+    "remotePath": "Notes/Waldorf-reflect.txt",
+    "size": "1.04 KB",
+    "snippet": "The books are filled with students' careful records of field trips and classroom experiments; impressions of the teachers' regular oral presentations; and, in more advanced classes, syntheses of what the students have read in primary sources. (Waldorf teachers avoid textbooks, considering their digested information a poor substitute for original material.) The texts were neatly handwritten, with fountain pens. They were also often accompanied by detailed drawings and poetry, some of which the students had written themselves. Playfulness is encouraged in these books, because Waldorf teachers believe that imaginative wonderings can be just as educational as objective facts and conclusions, if not more so. \"If you've had the experience of binding a book, knitting a sock, playing a recorder\"... One of the things I had to learn,\" Bojarsky said, \"was to not answer their questions, especially in the twelfth grade. If you give them answers, they'll just shut down. It's amazing what they'"
+  }
+```
+
+  ```sample rich summary json
+  {
+    "fileName": "Michael_Reco-Builder.txt",
+    "remotePath": "Notes/Michael_Reco-Builder.txt",
+    "size": "0.63 KB",
+    "snippet": "I had the privilege of working with Michael at formerly MIT Media Lab Asia. Michael's commitment to perfection defines her management style and has time and again inspired many of her associates to step up in order to succeed. Her ability to problem-solve has helped turn many a far-fetched idea into a successful reality. She makes sure that quality is never compromised and this level of consistency makes her extremely dependable. Along with all these amazing qualities, the thing that most stands out in Michael is the unwavering commitment to the team. I strongly recommend Michael and definitely look forward to working with her in the future.",
+    "one_line_summary": "A professional recommendation for Michael, highlighting her management style and commitment at Media Lab Asia.",
+    "category": "Career",
+    "tags": ["recommendation", "media lab asia", "management", "problem-solving", "professional reference"],
+    "entities": {
+      "people": ["Michael"],
+      "organizations": ["MIT Media Lab Asia"],
+      "projects": []
+    },
+    "themes": ["professional trust", "mentorship"],
+    "reuse_potential": 2,
+    "content_type": "correspondence"
+  },
+  {
+    "fileName": "OpenSouceBizModels.txt",
+    "remotePath": "Notes/OpenSouceBizModels.txt",
+    "size": "0.69 KB",
+    "snippet": "some basic Revenue Models for open source projects/companies Providing Services around Project (Hadoop, Cassendra, MongoDB, etc) Promoting Content in their softwares (Mozilla and Opera - Default Search Engine) Providing hosted paid model of their open source Implementation Donations Dual Licensing and selling commercial license to corporates Giving earlier access or info to its cutting edge version for Money (Android - debatable) - also known as corporate tie-ups It depends on the software. It can be professional support, it can be add-ons, paid knowledge base, partner's fee, donations, paid events, books, promotions materials. The biggest money comes from the top value added element.",
+    "one_line_summary": "A concise overview of various revenue models for open-source software companies and projects.",
+    "category": "Fintech",
+    "tags": ["open source", "business models", "monetization", "dual licensing", "saas"],
+    "entities": {
+      "people": [],
+      "organizations": ["Hadoop", "Cassandra", "MongoDB", "Mozilla", "Opera", "Android"],
+      "projects": []
+    },
+    "themes": ["market structure", "value capture"],
+    "reuse_potential": 5,
+    "content_type": "analysis"
+  }
+  ```
+
