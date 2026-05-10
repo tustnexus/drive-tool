@@ -50,6 +50,7 @@ bun extract.js
 
 # 4. Increment BATCH_NUM and repeat until all files are processed
 ```
+<img src="drive_indexing_pipeline.svg" width="700"/>
 
 Full setup instructions are in `metadata-for-every-doc-details.txt`.
 
